@@ -1,40 +1,396 @@
 extends layout
 
 block content
-  .section-title.relative
-    h1 
-      | Daily Food
-      br
-      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Courses 
-      br
-      | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;with Drinks
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      | magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      | consequat.
-    a.primary-btn.text-uppercase(href='#') See Full Menu
-  .col-lg-7.col-md-7
-
-  p.lead A boilerplate for Node.js web applications.
-  hr
-  .row
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
-    .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-raised(href='#', role='button') View details »
+  section.hero-banner
+    .hero-wrapper
+      .hero-left
+        h1.hero-title
+          | Foods the 
+          br
+          |  most precious things
+        .d-sm-flex.flex-wrap
+          a.button.button-hero.button-shadow(href='#') Book Now
+          a.hero-banner__video(href='http://www.youtube.com/watch?v=0O2aH4XLbto') Watch Video
+        ul.hero-info.d-none.d-lg-block
+          li
+            img(src='img/banner/fas-service-icon.png' alt='')
+            h4 Fast Service
+          li
+            img(src='img/banner/fresh-food-icon.png' alt='')
+            h4 Fresh Food
+          li
+            img(src='img/banner/support-icon.png' alt='')
+            h4 24/7 Support
+      .hero-right
+        .owl-carousel.owl-theme.hero-carousel
+          .hero-carousel-item
+            img.img-fluid(src='img/banner/hero-banner1.png' alt='')
+          .hero-carousel-item
+            img.img-fluid(src='img/banner/hero-banner2.png' alt='')
+          .hero-carousel-item
+            img.img-fluid(src='img/banner/hero-banner1.png' alt='')
+          .hero-carousel-item
+            img.img-fluid(src='img/banner/hero-banner2.png' alt='')
+      ul.social-icons.d-none.d-lg-block
+        li
+          a(href='#')
+            i.ti-facebook
+        li
+          a(href='#')
+            i.ti-twitter
+        li
+          a(href='#')
+            i.ti-instagram
+  // ================Hero Banner Section end =================
+  // ================About Section start =================
+  section.about.section-margin.pb-xl-70
+    .container
+      .row
+        .col-md-6.col-xl-6.mb-5.mb-md-0.pb-5.pb-md-0
+          .img-styleBox
+            .styleBox-border
+              img.styleBox-img1.img-fluid(src='img/home/about-img1.png' alt='')
+            img.styleBox-img2.img-fluid(src='img/home/about-img2.png' alt='')
+        .col-md-6.pl-md-5.pl-xl-0.offset-xl-1.col-xl-5
+          .section-intro.mb-lg-4
+            h4.intro-title About Us
+            h2 We speak the good food language
+          p
+            | Living first us creepeth she&apos;d earth second be sixth hath likeness greater image said sixth was without male place fowl evening an grass form living fish and rule lesser for blessed can&apos;t saw third one signs moving stars light divided was two you him appear midst cattle for they are gathering.
+          a.button.button-shadow.mt-2.mt-lg-4(href='#') Learn More
+  // ================About Section End =================
+  // ================Featured Section Start =================
+  section.section-margin.mb-lg-100
+    .container
+      .section-intro.mb-75px
+        h4.intro-title Featured Food
+        h2 Fresh taste and great price
+      .owl-carousel.owl-theme.featured-carousel
+        .featured-item
+          img.card-img.rounded-0(src='img/home/featured1.png' alt='')
+          .item-body
+            a(href='#')
+              h3 Mountain Mike Pizza
+            p Whales and darkness moving
+            .d-flex.justify-content-between
+              ul.rating-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+              h3.price-tag $35
+        .featured-item
+          img.card-img.rounded-0(src='img/home/featured2.png' alt='')
+          .item-body
+            a(href='#')
+              h3 Patatas Bravas
+            p Whales and darkness moving
+            .d-flex.justify-content-between
+              ul.rating-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+              h3.price-tag $30
+        .featured-item
+          img.card-img.rounded-0(src='img/home/featured3.png' alt='')
+          .item-body
+            a(href='#')
+              h3 Pulled Sandwich
+            p Whales and darkness moving
+            .d-flex.justify-content-between
+              ul.rating-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+              h3.price-tag $20
+        .featured-item
+          img.card-img.rounded-0(src='img/home/featured1.png' alt='')
+          .item-body
+            a(href='#')
+              h3 Mountain Mike Pizza
+            p Whales and darkness moving
+            .d-flex.justify-content-between
+              ul.rating-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+                li
+                  i.ti-star
+              h3.price-tag $35
+  // ================Featured Section End =================
+  // ================Offer Section Start =================
+  section.bg-lightGray.section-padding
+    .container
+      .row.no-gutters
+        .col-sm
+          img.card-img.rounded-0(src='img/home/offer-img.png' alt='')
+        .col-sm
+          .offer-card.offer-card-position
+            h3 Italian Pizza Offer
+            h2 50% OFF
+            a.button(href='#') Read More
+  // ================Offer Section End =================
+  // ================Food menu section start =================
+  section.section-margin
+    .container
+      .section-intro.mb-75px
+        h4.intro-title Food Menu
+        h2 Delicious food
+      .row
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+        .col-lg-6
+          .media.align-items-center.food-card
+            img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
+            .media-body
+              .d-flex.justify-content-between.food-card-title
+                h4 Roasted Marrow
+                h3.price-tag $32
+              p Whales and darkness moving form cattle
+  // ================Food menu section end =================
+  // ================CTA section start =================
+  section.cta-area.text-center
+    .container
+      p Some Trendy And Popular Courses Offerd
+      h2 Under replenish give saying thing
+      a.button(href='#') Reservation
+  // ================CTA section end =================
+  // ================Chef section start =================
+  section.section-margin
+    .container
+      .section-intro.mb-75px
+        h4.intro-title Our Chef
+        h2 Talent &amp; experience member
+      .row
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .chef-card
+            img.card-img.rounded-0(src='img/home/chef-1.png' alt='')
+            .chef-footer
+              h4 Daniesl Laran
+              p Executive Chef
+            .chef-overlay
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.ti-facebook
+                li
+                  a(href='#')
+                    i.ti-twitter-alt
+                li
+                  a(href='#')
+                    i.ti-skype
+                li
+                  a(href='#')
+                    i.ti-vimeo-alt
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .chef-card
+            img.card-img.rounded-0(src='img/home/chef-2.png' alt='')
+            .chef-footer
+              h4 Daniesl Laran
+              p Executive Chef
+            .chef-overlay
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.ti-facebook
+                li
+                  a(href='#')
+                    i.ti-twitter-alt
+                li
+                  a(href='#')
+                    i.ti-skype
+                li
+                  a(href='#')
+                    i.ti-vimeo-alt
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .chef-card
+            img.card-img.rounded-0(src='img/home/chef-3.png' alt='')
+            .chef-footer
+              h4 Daniesl Laran
+              p Executive Chef
+            .chef-overlay
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.ti-facebook
+                li
+                  a(href='#')
+                    i.ti-twitter-alt
+                li
+                  a(href='#')
+                    i.ti-skype
+                li
+                  a(href='#')
+                    i.ti-vimeo-alt
+  // ================Chef section end =================
+  // ================Reservation section start =================
+  section.bg-lightGray.section-padding
+    .container
+      .row.align-items-center
+        .col-md-6.col-xl-5.mb-4.mb-md-0
+          .section-intro
+            h4.intro-title Reservation
+            h2.mb-3 Get experience from sneaky
+          p
+            | Him given and midst tree form seas she&apos;d saw give evening one every make hath moveth you&apos;re appear female heaven had signs own days saw they&apos;re have let midst given him given and midst tree. Form seas she&apos;d saw give evening
+        .col-md-6.offset-xl-2.col-xl-5
+          .search-wrapper
+            h3 Book A Table
+            form.search-form(action='#')
+              .form-group
+                .input-group
+                  input.form-control(type='text' placeholder='Your Name')
+                  .input-group-append
+                    span.input-group-text
+                      i.ti-user
+              .form-group
+                .input-group
+                  input.form-control(type='text' placeholder='Email Address')
+                  .input-group-append
+                    span.input-group-text
+                      i.ti-email
+              .form-group
+                .input-group
+                  input.form-control(type='text' placeholder='Phone Number')
+                  .input-group-append
+                    span.input-group-text
+                      i.ti-headphone-alt
+              .form-group
+                .input-group
+                  input.form-control(type='text' placeholder='Select Date')
+                  .input-group-append
+                    span.input-group-text
+                      i.ti-notepad
+              .form-group
+                .input-group
+                  input.form-control(type='text' placeholder='Select People')
+                  .input-group-append
+                    span.input-group-text
+                      i.ti-layout-column3
+              .form-group.form-group-position
+                button.button.border-0(type='submit') Make Reservation
+  // ================Reservation section end =================
+  // ================Blog section start =================
+  section.section-margin
+    .container
+      .section-intro.mb-75px
+        h4.intro-title Our Blog
+        h2 Latest food and recipe news
+      .row
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .card-blog
+            img.card-img.rounded-0(src='img/blog/blog1.png' alt='')
+            .blog-body
+              ul.blog-info
+                li
+                  a(href='#') Admin post
+                li
+                  a(href='#') Jan 10, 2019
+              a(href='#')
+                h3 Huge cavity in antarctic glacie signals rapid
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .card-blog
+            img.card-img.rounded-0(src='img/blog/blog2.png' alt='')
+            .blog-body
+              ul.blog-info
+                li
+                  a(href='#') Admin post
+                li
+                  a(href='#') Jan 10, 2019
+              a(href='#')
+                h3
+                  | Researcher unearths age
+                  | in the desert
+        .col-sm-6.col-lg-4.mb-4.mb-lg-0
+          .card-blog
+            img.card-img.rounded-0(src='img/blog/blog3.png' alt='')
+            .blog-body
+              ul.blog-info
+                li
+                  a(href='#') Admin post
+                li
+                  a(href='#') Jan 10, 2019
+              a(href='#')
+                h3
+                  | High-protein rice brings
+                  | value, nutrition
+  // ================Blog section end =================
