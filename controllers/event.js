@@ -7,15 +7,11 @@ exports.postEvent = (req, res, next) => {
   console.log('Events');
   console.log(obj);
   const event = new Event({
-    eventName: obj.eventName,
-    eventDate: obj.eventDate,
-    eventTime: obj.eventTime,
-    guest: obj.guest,
-    budget: obj.budget,
-    contactName: obj.contactName,
+    bookName: obj.bookName,
     emailAddress: obj.emailAddress,
     phoneNumber: obj.phoneNumber,
-    postMessage: obj.postMessage,
+    eventDate: obj.eventDate,
+    selectPeople: obj.selectPeople,
   });
   event.save((err) => {
     if (err) {
@@ -57,15 +53,11 @@ exports.postUpdateEvent = (req, res, next) => {
     if (err) {
       console.log(err);
     } else if (event) {
-      event.eventName = obj.eventName;
-      event.eventDate = obj.eventDate;
-      event.eventTime = obj.eventTime;
-      event.guest = obj.guest;
-      event.budget = obj.budget;
-      event.contactName = obj.contactName;
-      event.emailAddress = obj.emailAddress;
-      event.phoneNumber = obj.phoneNumber;
-      event.postMessage = obj.postMessage;
+    event.bookName = obj.bookName,
+    event.emailAddress = obj.emailAddress,
+    event.phoneNumber = obj.phoneNumber,
+    event.eventDate = obj.eventDate,
+    event.selectPeople = obj.selectPeople,
       event.save((err) => {
         if (err) {
           return next(err);
@@ -104,28 +96,8 @@ exports.postGetReportEvent = (req, res, next) => {
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
                         <tr>
-                          <td class="heading">Event Name</td>
-                          <td class="value">${event.eventName}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Event Date</td>
-                          <td class="value">${event.eventDate}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Event Time</td>
-                          <td class="value">${event.eventTime}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Guest</td>
-                          <td class="value">${event.guest}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Budget</td>
-                          <td class="value">${event.budget}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Contact Name</td>
-                          <td class="value">${event.contactName}</td>
+                          <td class="heading">Booking Name</td>
+                          <td class="value">${event.bookName}</td>
                         </tr>
                         <tr>
                           <td class="heading">Email Address</td>
@@ -136,12 +108,12 @@ exports.postGetReportEvent = (req, res, next) => {
                           <td class="value">${event.phoneNumber}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Message</td>
-                          <td class="value">${event.postMessage}</td>
+                          <td class="heading">Event Date</td>
+                          <td class="value">${event.eventDate}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Date Entered</td>
-                          <td class="value">${event.createdAt}</td>
+                          <td class="heading">Selected People</td>
+                          <td class="value">${event.selectPeople}</td>
                         </tr>
                       </table>
                   </div>
@@ -229,12 +201,13 @@ const sendgridTransport = require('nodemailer-sendgrid-transport');
 const Event = require('../models/Event');
 const Contact = require('../models/Contact');
 
-const transporter = nodemailer.createTransport(sendgridTransport({
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    //api_key: 'ENTER_YOUR_SENDGRID_API_KEY_HERE'
-    api_key: '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'
-  }
-}));
+         user: 'lashleykeith@gmail.com',
+         pass: 'cakesheis'
+     }
+ });
 
 
 exports.postSendEmailEvent = (req, res, next) => {
@@ -274,46 +247,30 @@ exports.postEmailEvent = (req, res, next) => {
                       <h1 style="margin-left: 70px;">Event</h1>
                       <hr style=" margin-top:0px; height:10px;border:none;color:#333;background-color:#333; margin-left: 70px; margin-right: 73px;" />
                       <table border="1">
-                        <tr>
-                          <td class="heading">Event Name</td>
-                          <td class="value">${event.eventName}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Event Date</td>
-                          <td class="value">${event.eventDate}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Event Time</td>
-                          <td class="value">${event.eventTime}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Guest</td>
-                          <td class="value">${event.guest}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Budget</td>
-                          <td class="value">${event.budget}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Contact Name</td>
-                          <td class="value">${event.contactName}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Email Address</td>
-                          <td class="value">${event.emailAddress}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Phone Number</td>
-                          <td class="value">${event.phoneNumber}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Message</td>
-                          <td class="value">${event.postMessage}</td>
-                        </tr>
-                        <tr>
-                          <td class="heading">Date Entered</td>
-                          <td class="value">${event.createdAt}</td>
-                        </tr>
+                      <tr>
+                        <td class="heading">Booking Name</td>
+                        <td class="value">${event.bookName}</td>
+                      </tr>
+                      <tr>
+                        <td class="heading">Email Address</td>
+                        <td class="value">${event.emailAddress}</td>
+                      </tr>
+                      <tr>
+                        <td class="heading">Phone Number</td>
+                        <td class="value">${event.phoneNumber}</td>
+                      </tr>
+                      <tr>
+                        <td class="heading">Event Date</td>
+                        <td class="value">${event.eventDate}</td>
+                      </tr>
+                      <tr>
+                        <td class="heading">Selected People</td>
+                        <td class="value">${event.selectPeople}</td>
+                      </tr>
+                      <tr>
+                        <td class="heading">Date Entered</td>
+                        <td class="value">${event.createdAt}</td>
+                      </tr>
                       </table>
                   </div>
           `;

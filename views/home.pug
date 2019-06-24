@@ -315,34 +315,34 @@ block content
         .col-md-6.offset-xl-2.col-xl-5
           .search-wrapper
             h3 Book A Table
-            form.search-form(action='#')
+            form.search-form(action='/event' method='POST')
               .form-group
                 .input-group
-                  input.form-control(type='text' placeholder='Your Name')
+                  input.form-control(name='bookName', placeholder='Your Name', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Your Name'", required='', type='text')
                   .input-group-append
                     span.input-group-text
                       i.ti-user
               .form-group
                 .input-group
-                  input.form-control(type='text' placeholder='Email Address')
+                  input.form-control(name='emailAddress', placeholder='Email Address', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Email Address'", required='', type='email')
                   .input-group-append
                     span.input-group-text
                       i.ti-email
               .form-group
                 .input-group
-                  input.form-control(type='text' placeholder='Phone Number')
+                  input.form-control(name='phoneNumber', placeholder='Phone Number', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Phone Number'", required='', type='text')
                   .input-group-append
                     span.input-group-text
                       i.ti-headphone-alt
               .form-group
                 .input-group
-                  input.form-control(type='text' placeholder='Select Date')
+                  input#event_date.form-control(name='eventDate', placeholder='Select Date', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Select Date'", required='', type='date')
                   .input-group-append
                     span.input-group-text
                       i.ti-notepad
               .form-group
                 .input-group
-                  input.form-control(type='text' placeholder='Select People')
+                  input.form-control(name='selectPeople', placeholder='Select People', onfocus="this.placeholder = ''", onblur="this.placeholder = 'Select People'", required='', type='text')
                   .input-group-append
                     span.input-group-text
                       i.ti-layout-column3

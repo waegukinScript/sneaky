@@ -30,28 +30,20 @@ block content
             table.table.table-bordered.table-hover.table-striped
               thead
                 tr
-                  th Event Name
-                  th Event Date
-                  th Event Time
-                  th Guest
-                  th Budget
-                  th Contact Name
+                  th Book Name
                   th Email Address
                   th Phone Number
-                  th Message
+                  th Event Date
+                  th Select People
                   th Action
               tbody
                 each event in events
                   tr
-                    td= event.eventName
-                    td= event.eventDate
-                    td= event.eventTime
-                    td= event.guest
-                    td= event.budget
-                    td= event.contactName
+                    td= event.bookName
                     td= event.emailAddress
                     td= event.phoneNumber
-                    td= event.postMessage
+                    td= event.eventDate
+                    td= event.selectPeople
                     td
                       form(action= `/event/delete/${event.id}`, method='POST', onsubmit="return('Are you sure you want to delete this');")
                         .form-group
@@ -80,10 +72,7 @@ block content
                   th
                   th
                   th
-                  th
-                  th
-                  th
-                  th
+                  
                       form(action= `/event/delete-page/${currentPage}`, method='POST', onsubmit="return('Now we updated and saved the information');")
                           .form-group
                               input(type='hidden', name='_csrf', value=_csrf)

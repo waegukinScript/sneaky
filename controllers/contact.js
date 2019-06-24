@@ -21,17 +21,17 @@ exports.getContact = (req, res) => {
  * Send a contact form via Nodemailer.
  */
 exports.postContact = (req, res, next) => {
+  console.log('req.body.postMessage', req.body.postMessage);
   console.log('req.body.contactName', req.body.contactName);
   console.log('req.body.emailAddress', req.body.emailAddress);
-  console.log('req.body.phoneNumber', req.body.phoneNumber);
-  console.log('req.body.postMessage', req.body.postMessage);
+  console.log('req.body.subjectText', req.body.subjectText);
 
 
   const contact = new Contact({
+    postMessage: req.body.postMessage,
     contactName: req.body.contactName,
     emailAddress: req.body.emailAddress,
-    phoneNumber: req.body.phoneNumber,
-    postMessage: req.body.postMessage
+    subjectText: req.body.subjectText
   });
 
   contact.save((err) => {
@@ -143,7 +143,7 @@ exports.postUpdateContact = (req, res, next) => {
     } else if (contact) {
       contact.contactName = obj.contactName;
       contact.emailAddress = obj.emailAddress;
-      contact.phoneNumber = obj.phoneNumber;
+      contact.subjectText = obj.subjectText;
       contact.postMessage = obj.postMessage;
       contact.save((err) => {
         if (err) {
@@ -190,8 +190,8 @@ exports.postGetReportContact = (req, res, next) => {
                           <td class="value">${contact.emailAddress}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Phone Number</td>
-                          <td class="value">${contact.phoneNumber}</td>
+                          <td class="heading">Subject Text</td>
+                          <td class="value">${contact.subjectText}</td>
                         </tr>
                         <tr>
                           <td class="heading">Post Message</td>
@@ -286,13 +286,13 @@ const nodemailer = require('nodemailer');
 const sendgridTransport = require('nodemailer-sendgrid-transport');
 const Contact = require('../models/Contact');
 
-const transporter = nodemailer.createTransport(sendgridTransport({
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
   auth: {
-    //api_key: 'ENTER_YOUR_SENDGRID_API_KEY_HERE'
-    api_key: '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'
-
-  }
-}));
+         user: 'lashleykeith@gmail.com',
+         pass: 'cakesheis'
+     }
+ });
 
 
 exports.postSendEmailContact = (req, res, next) => {
@@ -341,8 +341,8 @@ exports.postEmailContact = (req, res, next) => {
                           <td class="value">${contact.emailAddress}</td>
                         </tr>
                         <tr>
-                          <td class="heading">Phone Number</td>
-                          <td class="value">${contact.phoneNumber}</td>
+                          <td class="heading">Subject Text</td>
+                          <td class="value">${contact.subjectText}</td>
                         </tr>
                         <tr>
                           <td class="heading">Post Message</td>

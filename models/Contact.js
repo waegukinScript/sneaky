@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const contactSchema = new mongoose.Schema({
   contactName: String,
   emailAddress: String,
-  phoneNumber: String,
+  subjectText: String,
   postMessage: String,
   createdAt: String
 }, { timestamps: true });
