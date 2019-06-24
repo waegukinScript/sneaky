@@ -1,528 +1,409 @@
 doctype html
 head
+  // Mobile Specific Meta
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Favicon
+  link(rel='shortcut icon' href='img/fav.png')
+  // Author Meta
+  meta(name='author' content='CodePixar')
+  // Meta Description
+  meta(name='description' content='')
+  // Meta Keyword
+  meta(name='keywords' content='')
+  // meta character set
   meta(charset='UTF-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  meta(http-equiv='X-UA-Compatible' content='ie=edge')
-  title Sneaky Restaurant - Home
-  link(rel='icon' href='img/Fevicon.png' type='image/png')
-  link(rel='stylesheet' href='vendors/bootstrap/bootstrap.min.css')
-  link(rel='stylesheet' href='vendors/themify-icons/themify-icons.css')
-  link(rel='stylesheet' href='vendors/owl-carousel/owl.theme.default.min.css')
-  link(rel='stylesheet' href='vendors/owl-carousel/owl.carousel.min.css')
-  link(rel='stylesheet' href='vendors/Magnific-Popup/magnific-popup.css')
-  link(rel='stylesheet' href='css/style.css')
-// ================ Header Menu Area start =================
-header.header_area
-  .main_menu
-    nav.navbar.navbar-expand-lg.navbar-light
-      .container.box_1620
-        a.navbar-brand.logo_h(href='index.html')
-          img(src='img/logo.png' alt='')
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        #navbarSupportedContent.collapse.navbar-collapse.offset
-          ul.nav.navbar-nav.menu_nav.justify-content-end
-            li.nav-item.active
-              a.nav-link(href='index.html') Home
-            li.nav-item
-              a.nav-link(href='about.html') About
-            li.nav-item
-              a.nav-link(href='menu.html') Menu
-            li.nav-item
-              a.nav-link(href='chef.html') Chef
-            li.nav-item.submenu.dropdown
-              a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false') Blog
-              ul.dropdown-menu
-                li.nav-item
-                  a.nav-link(href='blog.html') Blog Single
-                li.nav-item
-                  a.nav-link(href='blog-details.html') Blog Details
-            li.nav-item
-              a.nav-link(href='contact.html') Contact
-// ================Header Menu Area =================
-// ================Hero Banner Section start =================
-section.hero-banner
-  .hero-wrapper
-    .hero-left
-      h1.hero-title
-        | Foods the 
-        br
-        |  most precious things
-      .d-sm-flex.flex-wrap
-        a.button.button-hero.button-shadow(href='#') Book Now
-        a.hero-banner__video(href='http://www.youtube.com/watch?v=0O2aH4XLbto') Watch Video
-      ul.hero-info.d-none.d-lg-block
-        li
-          img(src='img/banner/fas-service-icon.png' alt='')
-          h4 Fast Service
-        li
-          img(src='img/banner/fresh-food-icon.png' alt='')
-          h4 Fresh Food
-        li
-          img(src='img/banner/support-icon.png' alt='')
-          h4 24/7 Support
-    .hero-right
-      .owl-carousel.owl-theme.hero-carousel
-        .hero-carousel-item
-          img.img-fluid(src='img/banner/hero-banner1.png' alt='')
-        .hero-carousel-item
-          img.img-fluid(src='img/banner/hero-banner2.png' alt='')
-        .hero-carousel-item
-          img.img-fluid(src='img/banner/hero-banner1.png' alt='')
-        .hero-carousel-item
-          img.img-fluid(src='img/banner/hero-banner2.png' alt='')
-    ul.social-icons.d-none.d-lg-block
-      li
-        a(href='#')
-          i.ti-facebook
-      li
-        a(href='#')
-          i.ti-twitter
-      li
-        a(href='#')
-          i.ti-instagram
-// ================Hero Banner Section end =================
-// ================About Section start =================
-section.about.section-margin.pb-xl-70
+  // Site Title
+  title Rooftop Restaurant
+  link(href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Roboto:400,500' rel='stylesheet')
+  //
+    CSS
+    =============================================
+  link(rel='stylesheet' href='css/linearicons.css')
+  link(rel='stylesheet' href='css/font-awesome.min.css')
+  link(rel='stylesheet' href='css/availability-calendar.css')
+  link(rel='stylesheet' href='css/magnific-popup.css')
+  link(rel='stylesheet' href='css/nice-select.css')
+  link(rel='stylesheet' href='css/owl.carousel.css')
+  link(rel='stylesheet' href='css/bootstrap.css')
+  link(rel='stylesheet' href='css/bootstrap-datepicker.css')
+  link(rel='stylesheet' href='css/main.css')
+// ================ Start Header Area =================
+header.header-area
   .container
-    .row
-      .col-md-6.col-xl-6.mb-5.mb-md-0.pb-5.pb-md-0
-        .img-styleBox
-          .styleBox-border
-            img.styleBox-img1.img-fluid(src='img/home/about-img1.png' alt='')
-          img.styleBox-img2.img-fluid(src='img/home/about-img2.png' alt='')
-      .col-md-6.pl-md-5.pl-xl-0.offset-xl-1.col-xl-5
-        .section-intro.mb-lg-4
-          h4.intro-title About Us
-          h2 We speak the good food language
-        p
-          | Living first us creepeth she&apos;d earth second be sixth hath likeness greater image said sixth was without male place fowl evening an grass form living fish and rule lesser for blessed can&apos;t saw third one signs moving stars light divided was two you him appear midst cattle for they are gathering.
-        a.button.button-shadow.mt-2.mt-lg-4(href='#') Learn More
-// ================About Section End =================
-// ================Featured Section Start =================
-section.section-margin.mb-lg-100
+    .header-wrap
+      .header-top.d-flex.justify-content-between.align-items-center.navbar-expand-md
+        .col.menu-left
+          a.active(href='index.html') Home
+          a(href='menu.html') menu
+          a(href='about.html') about
+        .col-3.logo
+          a(href='index.html')
+            img.mx-auto(src='img/logo.png' alt='')
+        nav.col.navbar.navbar-expand-md.justify-content-end
+          // Toggler/collapsibe Button
+          button.navbar-toggler(type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+            span.lnr.lnr-menu
+          // Navbar links
+          #collapsibleNavbar.collapse.navbar-collapse.menu-right
+            ul.navbar-nav.justify-content-center.w-100
+              li.nav-item.hide-lg
+                a.nav-link(href='index.html') Home
+              li.nav-item.hide-lg
+                a.nav-link(href='menu.html') menu
+              li.nav-item.hide-lg
+                a.nav-link(href='about.html') about
+              // Dropdown
+              li.nav-item.dropdown
+                a#navbardrop.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')
+                  | Pages
+                .dropdown-menu
+                  a.dropdown-item(href='contact.html') Contact
+                  a.dropdown-item(href='elements.html') Elements
+              li.nav-item.dropdown
+                a#navbardrop.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')
+                  | Blog
+                .dropdown-menu
+                  a.dropdown-item(href='blog-home.html') Blog
+                  a.dropdown-item(href='blog-single.html') Blog Detail
+              li.nav-item
+                a.nav-link(href='gallery.html') Gallery
+// ================ End Header Area =================
+// ================ Start banner Area =================
+section.home-banner-area.relative
   .container
-    .section-intro.mb-75px
-      h4.intro-title Featured Food
-      h2 Fresh taste and great price
-    .owl-carousel.owl-theme.featured-carousel
-      .featured-item
-        img.card-img.rounded-0(src='img/home/featured1.png' alt='')
-        .item-body
-          a(href='#')
-            h3 Mountain Mike Pizza
-          p Whales and darkness moving
-          .d-flex.justify-content-between
-            ul.rating-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-            h3.price-tag $35
-      .featured-item
-        img.card-img.rounded-0(src='img/home/featured2.png' alt='')
-        .item-body
-          a(href='#')
-            h3 Patatas Bravas
-          p Whales and darkness moving
-          .d-flex.justify-content-between
-            ul.rating-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-            h3.price-tag $30
-      .featured-item
-        img.card-img.rounded-0(src='img/home/featured3.png' alt='')
-        .item-body
-          a(href='#')
-            h3 Pulled Sandwich
-          p Whales and darkness moving
-          .d-flex.justify-content-between
-            ul.rating-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-            h3.price-tag $20
-      .featured-item
-        img.card-img.rounded-0(src='img/home/featured1.png' alt='')
-        .item-body
-          a(href='#')
-            h3 Mountain Mike Pizza
-          p Whales and darkness moving
-          .d-flex.justify-content-between
-            ul.rating-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-              li
-                i.ti-star
-            h3.price-tag $35
-// ================Featured Section End =================
-// ================Offer Section Start =================
-section.bg-lightGray.section-padding
-  .container
-    .row.no-gutters
-      .col-sm
-        img.card-img.rounded-0(src='img/home/offer-img.png' alt='')
-      .col-sm
-        .offer-card.offer-card-position
-          h3 Italian Pizza Offer
-          h2 50% OFF
-          a.button(href='#') Read More
-// ================Offer Section End =================
-// ================Food menu section start =================
-section.section-margin
-  .container
-    .section-intro.mb-75px
-      h4.intro-title Food Menu
-      h2 Delicious food
-    .row
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-      .col-lg-6
-        .media.align-items-center.food-card
-          img.mr-3.mr-sm-4(src='img/home/food1.png' alt='')
-          .media-body
-            .d-flex.justify-content-between.food-card-title
-              h4 Roasted Marrow
-              h3.price-tag $32
-            p Whales and darkness moving form cattle
-// ================Food menu section end =================
-// ================CTA section start =================
-section.cta-area.text-center
-  .container
-    p Some Trendy And Popular Courses Offerd
-    h2 Under replenish give saying thing
-    a.button(href='#') Reservation
-// ================CTA section end =================
-// ================Chef section start =================
-section.section-margin
-  .container
-    .section-intro.mb-75px
-      h4.intro-title Our Chef
-      h2 Talent &amp; experience member
-    .row
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .chef-card
-          img.card-img.rounded-0(src='img/home/chef-1.png' alt='')
-          .chef-footer
-            h4 Daniesl Laran
-            p Executive Chef
-          .chef-overlay
-            ul.social-icons
-              li
-                a(href='#')
-                  i.ti-facebook
-              li
-                a(href='#')
-                  i.ti-twitter-alt
-              li
-                a(href='#')
-                  i.ti-skype
-              li
-                a(href='#')
-                  i.ti-vimeo-alt
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .chef-card
-          img.card-img.rounded-0(src='img/home/chef-2.png' alt='')
-          .chef-footer
-            h4 Daniesl Laran
-            p Executive Chef
-          .chef-overlay
-            ul.social-icons
-              li
-                a(href='#')
-                  i.ti-facebook
-              li
-                a(href='#')
-                  i.ti-twitter-alt
-              li
-                a(href='#')
-                  i.ti-skype
-              li
-                a(href='#')
-                  i.ti-vimeo-alt
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .chef-card
-          img.card-img.rounded-0(src='img/home/chef-3.png' alt='')
-          .chef-footer
-            h4 Daniesl Laran
-            p Executive Chef
-          .chef-overlay
-            ul.social-icons
-              li
-                a(href='#')
-                  i.ti-facebook
-              li
-                a(href='#')
-                  i.ti-twitter-alt
-              li
-                a(href='#')
-                  i.ti-skype
-              li
-                a(href='#')
-                  i.ti-vimeo-alt
-// ================Chef section end =================
-// ================Reservation section start =================
-section.bg-lightGray.section-padding
+    .row.height.align-items-center.justify-content-center
+      .home-banner-content.col-lg-5
+        h1 Rooftop
+        hr
+        p A Fine Dinning Restaurant
+// ================ End banner Area =================
+// ================ Left Right And Banner Icon =================
+.go-down
+  a(href='#menu_area')
+    img.go-down-img(src='img/go-down.png' alt='')
+.fixed-view-menu
+  p
+    a(href='menu.html') view menu
+.fixed-book-table
+  p
+    a(href='index.html') book a table
+// ================ Left Right And Banner Icon =================
+// ================ Menu Area =================
+section#menu_area.menu-area
   .container
     .row.align-items-center
-      .col-md-6.col-xl-5.mb-4.mb-md-0
-        .section-intro
-          h4.intro-title Reservation
-          h2.mb-3 Get experience from sneaky
-        p
-          | Him given and midst tree form seas she&apos;d saw give evening one every make hath moveth you&apos;re appear female heaven had signs own days saw they&apos;re have let midst given him given and midst tree. Form seas she&apos;d saw give evening
-      .col-md-6.offset-xl-2.col-xl-5
-        .search-wrapper
-          h3 Book A Table
-          form.search-form(action='#')
-            .form-group
-              .input-group
-                input.form-control(type='text' placeholder='Your Name')
-                .input-group-append
-                  span.input-group-text
-                    i.ti-user
-            .form-group
-              .input-group
-                input.form-control(type='text' placeholder='Email Address')
-                .input-group-append
-                  span.input-group-text
-                    i.ti-email
-            .form-group
-              .input-group
-                input.form-control(type='text' placeholder='Phone Number')
-                .input-group-append
-                  span.input-group-text
-                    i.ti-headphone-alt
-            .form-group
-              .input-group
-                input.form-control(type='text' placeholder='Select Date')
-                .input-group-append
-                  span.input-group-text
-                    i.ti-notepad
-            .form-group
-              .input-group
-                input.form-control(type='text' placeholder='Select People')
-                .input-group-append
-                  span.input-group-text
-                    i.ti-layout-column3
-            .form-group.form-group-position
-              button.button.border-0(type='submit') Make Reservation
-// ================Reservation section end =================
-// ================Blog section start =================
-section.section-margin
+      .col-lg-5.col-md-5
+        .section-title.relative
+          h1
+            | Daily Food 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Courses 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;with Drinks
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            | magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat.
+          a.primary-btn.text-uppercase(href='#') See Full Menu
+      .col-lg-7.col-md-7
+        .menu-list
+          .single-menu
+            h3 Appetizer
+            ul.list
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+          .single-menu
+            h3 Main Courses
+            ul.list
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+          .single-menu
+            h3 Drinks &amp; Juices
+            ul.list
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+              li
+                p.menu-item
+                  | Ham &amp; Potato Sandwiches ........... 
+                  span $25.00
+                p (French bread baguette, cooked ham, potato salad)
+// ================End Menu Area =================
+// ================ Gallery Area =================
+section.gallery-area
   .container
-    .section-intro.mb-75px
-      h4.intro-title Our Blog
-      h2 Latest food and recipe news
-    .row
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .card-blog
-          img.card-img.rounded-0(src='img/blog/blog1.png' alt='')
-          .blog-body
-            ul.blog-info
-              li
-                a(href='#') Admin post
-              li
-                a(href='#') Jan 10, 2019
-            a(href='#')
-              h3 Huge cavity in antarctic glacie signals rapid
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .card-blog
-          img.card-img.rounded-0(src='img/blog/blog2.png' alt='')
-          .blog-body
-            ul.blog-info
-              li
-                a(href='#') Admin post
-              li
-                a(href='#') Jan 10, 2019
-            a(href='#')
-              h3
-                | Researcher unearths age
-                | in the desert
-      .col-sm-6.col-lg-4.mb-4.mb-lg-0
-        .card-blog
-          img.card-img.rounded-0(src='img/blog/blog3.png' alt='')
-          .blog-body
-            ul.blog-info
-              li
-                a(href='#') Admin post
-              li
-                a(href='#') Jan 10, 2019
-            a(href='#')
-              h3
-                | High-protein rice brings
-                | value, nutrition
-// ================Blog section end =================
-// ================ start footer Area =================
+    .row.align-items-center
+      .col-lg-6.col-md-5.col-sm-6
+        .single-gallery.mt--480
+          .overlay
+          figure
+            img.img-fluid.w-100(src='img/gallery/g1.jpg' alt='')
+          .icon
+            a.photo-gallery-pop-up(href='img/gallery/g1.jpg')
+              span.lnr.lnr-cross
+      .col-lg-5.col-md-6.col-sm-6
+        .single-gallery
+          .overlay
+          figure
+            img.img-fluid.w-100(src='img/gallery/g2.jpg' alt='')
+          .icon
+            a.photo-gallery-pop-up(href='img/gallery/g2.jpg')
+              span.lnr.lnr-cross
+      .offset-lg-1.col-lg-5.col-md-5.col-sm-6
+        .single-gallery.mt--280
+          .overlay
+          figure
+            img.img-fluid.w-100(src='img/gallery/g3.jpg' alt='')
+          .icon
+            a.photo-gallery-pop-up(href='img/gallery/g3.jpg')
+              span.lnr.lnr-cross
+      .col-lg-6.col-md-6.col-sm-6
+        .single-gallery
+          .overlay
+          figure
+            img.img-fluid.w-100(src='img/gallery/g4.jpg' alt='')
+          .icon
+            a.photo-gallery-pop-up(href='img/gallery/g4.jpg')
+              span.lnr.lnr-cross
+// ================ End Gallery Area =================
+// ================ Reservation Area =================
+section.reservation-area
+  .container
+    .row.align-items-center
+      .col-lg-7.col-md-6
+        form#myForm.booking-form(action='')
+          .row
+            .col-lg-12.d-flex.flex-column.mb-20
+              input.form-control(name='event-name' placeholder='Event Name' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Event Name'" required='' type='text')
+            .input-group.col-lg-6.mb-20
+              input#event_date.form-control.datepicker(placeholder='Event Date' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Event Date'" required='' type='text')
+              span.input-group-append
+                button.btn.btn-outline-secondary.border-left-0.border-0(type='button')
+                  i.fa.fa-calendar.reservation-calendar
+            .col-lg-6.d-flex.flex-column.mb-20
+              .nice-select.app-select.form-control(tabindex='0')
+                span.current Event Time
+                ul.list
+                  li.option.selected(data-value='Project you want to donate' data-display='Project you want to donate')
+                    | Meal
+                    | Preferences
+                  li.option(data-value='1') 05pm
+                  li.option(data-value='2') 08pm
+                  li.option(data-value='3') 09pm
+            .col-lg-6.d-flex.flex-column.mb-20
+              .nice-select.app-select.form-control(tabindex='0')
+                span.current Number of guests
+                ul.list
+                  li.option.selected(data-value='Project you want to donate' data-display='Project you want to donate')
+                    | Number
+                    | of guests
+                  li.option(data-value='1') Number of guests 1
+                  li.option(data-value='2') Number of guests 2
+                  li.option(data-value='3') Number of guests 3
+            .col-lg-6.d-flex.flex-column.mb-20
+              input.form-control(name='budget' placeholder='Budget' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Budget'" required='' type='text')
+            .col-lg-12.d-flex.flex-column.mb-20
+              input.form-control(name='contact-name' placeholder='Contact Name' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contact Name'" required='' type='text')
+            .col-lg-12.d-flex.flex-column.mb-20
+              input.form-control(name='email-address' placeholder='Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required='' type='email')
+            .col-lg-12.d-flex.flex-column.mb-20
+              input.form-control(name='phone-number' placeholder='Phone Number' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone Number'" required='' type='text')
+            .col-lg-12.d-flex.flex-column
+              textarea.form-control(name='post-message' placeholder='Post a message' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Post a message'" required='')
+            .col-lg-12.d-flex.justify-content-end
+              button.primary-btn.dark.mt-30.text-uppercase Send Request
+            .alert-msg
+      .offset-lg-1.col-lg-4.col-md-6
+        .section-title.relative
+          h1
+            | Book a 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Table or 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Rooms for 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;private 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;dining
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            | magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat.
+// ================End Reservation Area =================
+// ================ Chefs Quotes Area =================
+section.chefs-quotes-area
+  .container
+    .row.align-items-center
+      .col-lg-5.col-md-6
+        .section-title.relative
+          h1
+            | Chef&rsquo;s 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Quotes
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+            | magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            | consequat. consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            | enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Quotes
+          img.img-fluid(src='img/signature.png' alt='')
+      .offset-lg-1.col-lg-6.col-md-6
+        .mt--120
+          img.chef-img.img-fluid(src='img/chefs-quotes.jpg' alt='')
+// ================ End Chefs Quotes Area =================
+// ================ Start Call To Action Area =================
+section.container.section-gap-top
+  .callto-action-area.relative
+    .row.d-flex.justify-content-center
+      .col-lg-12.p-0
+        .cta-owl.owl-carousel
+          .item
+            .cta-img
+              img.img-fluid(src='img/callaction-bg.jpg' alt='')
+            .text-box.text-center
+              h3.mb-10 Main Course
+              p
+                | Chicken Steak with gerlic bread &amp; Fries
+          .item
+            .cta-img
+              img.img-fluid(src='img/callaction-bg.jpg' alt='')
+            .text-box.text-center
+              h3.mb-10 Main Course
+              p
+                | Chicken Steak with gerlic bread &amp; Fries
+// ================ End Call To Action Area =================
+// ================ Contact Area =================
+section.contact-area.section-gap
+  .container
+    .row.align-items-center
+      .col-lg-6.col-md-6
+        #contactMap
+      .offset-lg-1.col-lg-5.col-md-6
+        .section-title.relative
+          h1
+            | Rooftop 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Fine Dinning 
+            br
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Restaurant 
+            br
+          .mb-40
+            p 432 Wyandotte Ave, Lakewood, OH, 44107
+            p 432 Wyandotte Ave, Lakewood, OH, 44107
+          .mb-40
+            p 012 44 (216) 785-9346
+            p 012 44 (216) 785-9346
+            p 012 44 (216) 785-9346
+          .mail
+            p info@rooftoprestaurant.co.uk
+            p support@rooftoprestaurant.com
+// ================ End Contact Area =================
+// ================ Start Footer Area =================
 footer.footer-area.section-gap
   .container
     .row
-      .col-xl-2.col-sm-6.mb-4.mb-xl-0.single-footer-widget
-        h4 Top Products
-        ul
-          li
-            a(href='#') Managed Website
-          li
-            a(href='#') Manage Reputation
-          li
-            a(href='#') Power Tools
-          li
-            a(href='#') Marketing Service
-      .col-xl-2.col-sm-6.mb-4.mb-xl-0.single-footer-widget
-        h4 Quick Links
-        ul
-          li
-            a(href='#') Jobs
-          li
-            a(href='#') Brand Assets
-          li
-            a(href='#') Investor Relations
-          li
-            a(href='#') Terms of Service
-      .col-xl-2.col-sm-6.mb-4.mb-xl-0.single-footer-widget
-        h4 Features
-        ul
-          li
-            a(href='#') Jobs
-          li
-            a(href='#') Brand Assets
-          li
-            a(href='#') Investor Relations
-          li
-            a(href='#') Terms of Service
-      .col-xl-2.col-sm-6.mb-4.mb-xl-0.single-footer-widget
-        h4 Resources
-        ul
-          li
-            a(href='#') Guides
-          li
-            a(href='#') Research
-          li
-            a(href='#') Experts
-          li
-            a(href='#') Agencies
-      .col-xl-4.col-md-8.mb-4.mb-xl-0.single-footer-widget
-        h4 Newsletter
-        p You can trust us. we only send promo offers,
-        #mc_embed_signup.form-wrap
-          form(target='_blank' action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01' method='get')
-            .input-group
-              input.form-control(type='email' name='EMAIL' placeholder='Your Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '")
-              .input-group-append
-                button.btn.click-btn(type='submit')
-                  i.ti-arrow-right
-            div(style='position: absolute; left: -5000px;')
-              input(name='b_36c4fd991d266f23781ded980_aefe40901a' tabindex='-1' value='' type='text')
-            .info
-    .footer-bottom.row.align-items-center.text-center.text-lg-left
-      p.footer-text.m-0.col-lg-8.col-md-12
-        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-        | Copyright &copy;
-        script.
-          document.write(new Date().getFullYear());
-        |  All rights reserved | This template is made with 
-        i.ti-heart(aria-hidden='true')
+      .col-lg-2.col-md-6.col-sm-6
+        .single-footer-widget
+          h4 Top Products
+          ul
+            li
+              a(href='#') Managed Website
+            li
+              a(href='#') Manage Reputation
+            li
+              a(href='#') Power Tools
+            li
+              a(href='#') Marketing Service
+      .col-lg-2.col-md-6.col-sm-6
+        .single-footer-widget
+          h4 Quick links
+          ul
+            li
+              a(href='#') Jobs
+            li
+              a(href='#') Brand Assets
+            li
+              a(href='#') Investor Relations
+            li
+              a(href='#') Terms of Service
+      .col-lg-2.col-md-6.col-sm-6
+        .single-footer-widget
+          h4 Features
+          ul
+            li
+              a(href='#') Jobs
+            li
+              a(href='#') Brand Assets
+            li
+              a(href='#') Investor Relations
+            li
+              a(href='#') Terms of Service
+      .col-lg-2.col-md-6.col-sm-6
+        .single-footer-widget
+          h4 Resources
+          ul
+            li
+              a(href='#') Guides
+            li
+              a(href='#') Research
+            li
+              a(href='#') Experts
+            li
+              a(href='#') Agencies
+      .col-lg-4.col-md-6.col-sm-6
+        .single-footer-widget
+          h4 Newsletter
+          p Stay update with our latest
+          #mc_embed_signup
+            form(target='_blank' action='https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01' method='get')
+              .input-group
+                input.form-control(type='text' name='EMAIL' placeholder='Enter Email Address' onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required='')
+                .input-group-btn
+                  button.btn.btn-default(type='submit')
+                    span.lnr.lnr-arrow-right
+                .info
+    .footer-bottom.row.align-items-center.justify-content-between
+      p.footer-text.m-0.col-lg-6.col-md-12
+        | Copyright &copy; 2018 All rights reserved | This template is made with
+        span.lnr.lnr-heart
         |  by 
-        a(href='https://colorlib.com' target='_blank') Colorlib
-        // Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0.
-      .col-lg-4.col-md-12.text-center.text-lg-right.footer-social
+        a(href='#') Colorlib
+      .col-lg-6.col-sm-12.footer-social
         a(href='#')
-          i.ti-facebook
+          i.fa.fa-facebook
         a(href='#')
-          i.ti-twitter-alt
+          i.fa.fa-twitter
         a(href='#')
-          i.ti-dribbble
+          i.fa.fa-dribbble
         a(href='#')
-          i.ti-linkedin
-// ================ End footer Area =================
-script(src='vendors/jquery/jquery-3.2.1.min.js')
-script(src='vendors/bootstrap/bootstrap.bundle.min.js')
-script(src='vendors/owl-carousel/owl.carousel.min.js')
-script(src='vendors/nice-select/jquery.nice-select.min.js')
-script(src='vendors/Magnific-Popup/jquery.magnific-popup.min.js')
+          i.fa.fa-behance
+// ================ End Footer Area =================
+script(src='js/vendor/jquery-2.2.4.min.js')
+script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js' integrity='sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4' crossorigin='anonymous')
+script(src='js/vendor/bootstrap.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/jquery.sticky.js')
+script(src='js/parallax.min.js')
+script(src='js/jquery.nice-select.min.js')
 script(src='js/jquery.ajaxchimp.min.js')
-script(src='js/mail-script.js')
+script(src='js/jquery.magnific-popup.min.js')
+script(type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA')
+script(src='js/bootstrap-datepicker.js')
 script(src='js/main.js')
